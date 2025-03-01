@@ -128,6 +128,39 @@ a {
     transform: translateY(-50%);
 }
 
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre l'icône et le texte */
+}
+
+button i {
+    font-size: 20px; /* Taille de l'icône */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-52%);
+}
+
+button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
 button.prev, button.next {
     position: absolute;
     top: 50%;
@@ -135,42 +168,24 @@ button.prev, button.next {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 20px 30px;  /* Augmenter la taille des boutons */
-    font-size: 2rem;  /* Augmenter la taille de la police */
-    z-index: 5;
+    padding: 10px 15px;
     cursor: pointer;
-    width: 70px;  /* Largeur personnalisée */
-    height: 70px; /* Hauteur personnalisée */
-    border-radius: 50%; /* Forme circulaire */
-    display: flex;
-    justify-content: center;  /* Centrer le texte à l'intérieur */
-    align-items: center;     /* Centrer le texte à l'intérieur */
-}
-
-button.prev::before, button.next::before {
-    font-size: 2rem;  /* Taille des symboles */
+    font-size: 1.5rem;
+    z-index: 5;
 }
 
 button.prev {
     left: 10px;
+    
 }
 
 button.next {
     right: 10px;
 }
 
-button.prev::before {
-    content: "<";  /* Ajouter "<" dans le bouton précédent */
-}
-
-button.next::before {
-    content: ">";  /* Ajouter ">" dans le bouton suivant */
-}
-
 button.prev:hover, button.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-
 button:active {
     transform: translateY(-50%) scale(0.95);
 }
