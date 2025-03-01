@@ -3,43 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="#projects-streamlit">Projets Streamlit / Python</a></li>
+                <li><a href="#projects-pbi">Projets Power Bi</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis un Data Analyst passionné en quête de nouvelles opportunités.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p>Description du projet 1...</p>
-        </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p>Description du projet 2...</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Retrouvez-moi sur <a href="https://github.com/ton-profil">GitHub</a></p>
-    </section>
-    
+
+    <main>
+        <section id="about">
+            <h1>À propos de moi</h1>
+        </section>
+        <section id="about2">
+            <p>Je suis un Data Analyst passionné par l'analyse des données et la création de solutions innovantes.</p>
+        </section>
+
+        <section id="projects-streamlit">
+            <h1>Mes Projets Streamlit / Python</h1>
+            <article id="projects2">
+                <div class="slider streamlit-slider">
+                    <div class="slide">
+                        <p>Va te faire foot</p>
+                        <p>Site de recommendations de joueurs de football</p>
+                        <p><a href="https://github.com/KilianCadiou/Va-Te-Faire-Foot/blob/main/README.md" target="_blank">Accéder au Repository</a></p>
+                        <a href="https://va-te-faire-foot.streamlit.app/" target="_blank">
+                            <img src="IMAGES/STR - Foot.png" alt="Projet 1" width="auto" height="500">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <p>The Rock'mendation</p>
+                        <p>Site de recommendations de films</p>
+                        <p><a href="https://github.com/KilianCadiou/The-Rock-mendation/blob/main/README.md" target="_blank">Accéder au Repository</a></p>
+                        <a href="https://the-rockmendation.streamlit.app/" target="_blank">
+                            <img src="IMAGES/STR - Films.png" alt="Projet 3" width="auto" height="500">
+                        </a>
+                    </div>
+                    <button class="prev-str" onclick="moveStreamlitSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-str" onclick="moveStreamlitSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section id="projects-pbi">
+            <h1>Mes Projets Power Bi</h1>
+            <article id="projects3">
+                <div class="slider pbi-slider">
+                    <div class="slide">
+                        <p>Business Case</p>
+                        <p>Analyse du marché du Vin</p>
+                        <p><a href="https://drive.google.com/file/d/1oGeGZB9csG-QYMVaHoGFt3p1b_mKIR-7/view?usp=sharing" target="_blank">Accéder au Power Bi</a></p>
+                        <a href="https://drive.google.com/file/d/1olz6SuaTdRwt4UnYuHrLtsHan7SMpiuL/view?usp=sharing" target="_blank">
+                            <img src="IMAGES/PBI - Vin.png" alt="Projet 2" width="auto" height="500">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <p>Business Case</p>
+                        <p>Analyse du marché du Vélo</p>
+                        <p><a href="https://drive.google.com/file/d/1ob1YMhqjimMh8ON2nrUvezTrAE7KJGzc/view?usp=sharing" target="_blank">Accéder au Power Bi</a></p>
+                        <a href="https://drive.google.com/file/d/1omt3vxKo8wrrOwBGvJuU7M-fmgb9i1hk/view?usp=sharing" target="_blank">
+                            <img src="IMAGES/PBI - Vélo.webp" alt="Projet 4" width="auto" height="500">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <p>Business Case</p>
+                        <p>Analyse du marché de l'immobilier dans l'Ain</p>
+                        <p><a href="https://drive.google.com/file/d/1oXqMnHWfVNOy_2JbDbH9v6qHnQqrlkVS/view?usp=sharing" target="_blank">Accéder au Power Bi</a></p>
+                        <a href="https://drive.google.com/file/d/1on2F4qBZOH5KdbkDO96GIlp2oaQ9dKNb/view?usp=sharing" target="_blank">
+                            <img src="IMAGES/PBI - Ain.webp" alt="Projet 5" width="auto" height="500">
+                        </a>
+                    </div>
+                    <button class="prev-pbi" onclick="movePbiSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-pbi" onclick="movePbiSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Envoyez-moi un message à <a href="mailto:example@email.com">example@email.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
