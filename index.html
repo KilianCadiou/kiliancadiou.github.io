@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,20 +22,28 @@
     </header>
 
     <main>
+        <section id="Bienvenue">
+            <h1>Bienvenue sur mon portfolio</h1>
+        </section>
+
         <section id="about">
             <h1>À propos de moi</h1>
         </section>
+        
         <section id="about2">
             <p>Je suis un Data Analyst passionné par l'analyse des données et la création de solutions innovantes.</p>
         </section>
 
         <section id="projects-streamlit">
             <h1>Mes Projets Streamlit / Python</h1>
-            <article id="projects2">
-                <div class="slider streamlit-slider">
-                    <div class="slide">
+        </section>
+
+        <section id="projects2">
+            <div class="slider streamlit-slider">
+                <div class="slides">
+                    <div class="slide active">
                         <p>Va te faire foot</p>
-                        <p>Site de recommendations de joueurs de football</p>
+                        <p>Site de recommandations de joueurs de football</p>
                         <p><a href="https://github.com/KilianCadiou/Va-Te-Faire-Foot/blob/main/README.md" target="_blank">Accéder au Repository</a></p>
                         <a href="https://va-te-faire-foot.streamlit.app/" target="_blank">
                             <img src="IMAGES/STR - Foot.png" alt="Projet 1" width="auto" height="500">
@@ -42,27 +51,42 @@
                     </div>
                     <div class="slide">
                         <p>The Rock'mendation</p>
-                        <p>Site de recommendations de films</p>
+                        <p>Site de recommandations de films</p>
                         <p><a href="https://github.com/KilianCadiou/The-Rock-mendation/blob/main/README.md" target="_blank">Accéder au Repository</a></p>
                         <a href="https://the-rockmendation.streamlit.app/" target="_blank">
-                            <img src="IMAGES/STR - Films.png" alt="Projet 3" width="auto" height="500">
+                            <img src="IMAGES/STR - Films.png" alt="Projet 2" width="auto" height="500">
                         </a>
                     </div>
-                    <button class="prev-str" onclick="moveStreamlitSlide(-1)">
+                    <div class="slide">
+                        <p>Les Sternes de Ploubaz'</p>
+                        <p>Site internet de mon club de badminton</p>
+                        <p><a href="https://fr.wix.com/website/design" target="_blank">Création via WIX</a></p>
+                        <a href="https://www.les-sternes-de-ploubaz.com" target="_blank">
+                            <img src="IMAGES/LOGO - Bad.png" alt="Projet 3" width="auto" height="500">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev" onclick="moveStreamlitSlide(-1)">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="next-str" onclick="moveStreamlitSlide(1)">
+                    <button class="next" onclick="moveStreamlitSlide(1)">
                         <i class="fas fa-chevron-right"></i>
                     </button>
-                </div>
-            </article>
+                </div>  
+            </div>
         </section>
-
+        
+        <br><br>
+        
         <section id="projects-pbi">
             <h1>Mes Projets Power Bi</h1>
-            <article id="projects3">
-                <div class="slider pbi-slider">
-                    <div class="slide">
+        </section>
+        
+        <section id="projects3">
+            <div class="slider pbi-slider">
+                <div class="slides">
+                    <div class="slide active">
                         <p>Business Case</p>
                         <p>Analyse du marché du Vin</p>
                         <p><a href="https://drive.google.com/file/d/1oGeGZB9csG-QYMVaHoGFt3p1b_mKIR-7/view?usp=sharing" target="_blank">Accéder au Power Bi</a></p>
@@ -86,14 +110,16 @@
                             <img src="IMAGES/PBI - Ain.webp" alt="Projet 5" width="auto" height="500">
                         </a>
                     </div>
-                    <button class="prev-pbi" onclick="movePbiSlide(-1)">
+                </div>    
+                <div class="slider-controls">
+                    <button class="prev" onclick="movePbiSlide(-1)">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="next-pbi" onclick="movePbiSlide(1)">
+                    <button class="next" onclick="movePbiSlide(1)">
                         <i class="fas fa-chevron-right"></i>
                     </button>
-                </div>
-            </article>
+                </div>   
+            </div>
         </section>
 
         <section id="contact">

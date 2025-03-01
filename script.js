@@ -1,54 +1,36 @@
-function initStreamlitSlider() {
-    let currentSlide = 0;
-    const sliderClass = "streamlit-slider";
-    const slides = document.querySelectorAll(`.${sliderClass} .slide`);
+// Fonction pour Streamlit Slider
+function moveStreamlitSlide(direction) {
+    const slider = document.querySelector(".streamlit-slider .slides");
+    const slides = slider.querySelectorAll(".slide");
+    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
 
-    function showSlide(index) {
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
-
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? "block" : "none";
-        });
-
-        currentSlide = index;
-    }
-
-    function moveSlide(direction) {
-        showSlide(currentSlide + direction);
-    }
-
-    showSlide(0); // Afficher la première slide au chargement
-
-    window.moveStreamlitSlide = moveSlide; // Exposer la fonction moveSlide
+    slides[activeIndex].classList.remove("active");
+    activeIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[activeIndex].classList.add("active");
 }
 
-function initPbiSlider() {
-    let currentSlide = 0;
-    const sliderClass = "pbi-slider";
-    const slides = document.querySelectorAll(`.${sliderClass} .slide`);
-
-    function showSlide(index) {
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
-
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? "block" : "none";
-        });
-
-        currentSlide = index;
-    }
-
-    function moveSlide(direction) {
-        showSlide(currentSlide + direction);
-    }
-
-    showSlide(0); // Afficher la première slide au chargement
-
-    window.movePbiSlide = moveSlide; // Exposer la fonction moveSlide
+// Fonction pour Power BI Slider
+function movePbiSlide(direction) {
+    const slider = document.querySelector(".pbi-slider .slides");
+    const slides = slider.querySelectorAll(".slide");
+    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+    
+    slides[activeIndex].classList.remove("active");
+    activeIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[activeIndex].classList.add("active");
 }
 
+// Initialisation des sliders au chargement de la page
 document.addEventListener("DOMContentLoaded", () => {
-    initStreamlitSlider();
-    initPbiSlider();
+    // Streamlit slider
+    const streamlitSlides = document.querySelectorAll(".streamlit-slider .slide");
+    streamlitSlides.forEach((slide, index) => {
+        if (index !== 0) slide.classList.remove("active");
+    });
+
+    // Power BI slider
+    const pbiSlides = document.querySelectorAll(".pbi-slider .slide");
+    pbiSlides.forEach((slide, index) => {
+        if (index !== 0) slide.classList.remove("active");
+    });
 });
