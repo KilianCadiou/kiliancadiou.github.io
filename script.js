@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const toggleButton = document.querySelector(".nav-toggle");
-//     const navMenu = document.querySelector("nav ul");
+// Cacher ou afficher le menu au clic sur le bouton hamburger
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
-//     toggleButton.addEventListener("click", function () {
-//         navMenu.classList.toggle("show");
-//     });
-// });
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+

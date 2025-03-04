@@ -34,6 +34,23 @@ nav ul {
     gap: 40px;
 }
 
+.nav-toggle {
+    display: none;  /* C'est masqué par défaut, mais visible sur mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
 /* Couleur des liens par défaut */
 a {
     color: #607D8B; /* Bleu-gris */
@@ -82,7 +99,13 @@ h1 {
     box-shadow: 0 5px 15px rgba(96, 125, 139, 0.4);
 }
 
-h2, h3, h4 {
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px
+}
+
+h3, h4 {
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -157,12 +180,12 @@ button:hover {
 
 button.prev {
     left: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(134, 131, 131, 0.6);
 }
 
 button.next {
     right: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(134, 131, 131, 0.6);
 }
 
 button.prev:hover, button.next:hover {
@@ -356,5 +379,31 @@ footer p {
         object-fit: cover;
         display: block;
     }
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;  /* Masque le menu par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 30, 30, 0.9);
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;  /* Affiche le menu quand "show" est ajouté */
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        font-size: 20px;
+    }
+
 }
 
