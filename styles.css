@@ -259,7 +259,9 @@ footer p {
     background-color: #555;
 }
 
-
+header {
+    padding: 20px 0;
+}
 .skills-table td {
     padding: 12px;
     border-bottom: 1px solid #444;
