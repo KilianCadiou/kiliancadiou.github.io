@@ -259,9 +259,7 @@ footer p {
     background-color: #555;
 }
 
-header {
-    padding: 40px 0;
-}
+
 .skills-table td {
     padding: 12px;
     border-bottom: 1px solid #444;
@@ -285,7 +283,9 @@ header {
     .nav-toggle {
         display: block;
     }
-
+    header {
+        padding: 40px 0;
+    }
     nav ul {
         display: none;
         flex-direction: column;
