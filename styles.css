@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #1e1e1e;
     color: #f5f5f5;
-    padding: 60px 15px;
+    padding: 60px;
     line-height: 1.6;
 }
 
@@ -18,7 +18,7 @@ body {
 header {
     background: rgba(30, 30, 30, 0.9);
     backdrop-filter: blur(10px);
-    padding: 15px 5%;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,41 +32,51 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0;
+    gap: 40px;
 }
 
-nav ul li {
-    text-align: center;
+/* Couleur des liens par défaut */
+a {
+    color: #607D8B; /* Bleu-gris */
+    text-decoration: none; /* Enlève le soulignement */
 }
 
+/* Couleur des liens au survol */
+a:hover {
+    color: #B0BEC5; /* Gris clair, plus doux au survol */
+}
+
+/* Pour les liens dans les menus de navigation */
 nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* Couleur initiale pour les liens dans la navigation */
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
+nav ul li a:hover {
+    color: #607D8B; /* Bleu-gris au survol dans la navigation */
+}
+
+
 /* SECTIONS */
 section {
-    padding: 20px;
+    padding: 20px 15px;
     text-align: center;
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
 
 /* TITRES */
 h1 {
-    font-size: 28px;
-    padding: 10px 20px;
+    font-size: 36px;
     color: #ffffff;
     margin-bottom: 20px;
     background: linear-gradient(135deg, #607D8B, #B0BEC5); /* Dégradé bleu-gris */
     text-transform: uppercase;
     letter-spacing: 3px;
+    padding: 1px 40px;
     border-radius: 25px;
     text-align: center;
     display: inline-block;
@@ -74,118 +84,193 @@ h1 {
 }
 
 h2, h3, h4 {
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
+/* h2 {
+    font-size: 32px;
+    color: #607D8B;
+}
+
+h3 {
+    font-size: 24px;
+    font-style: italic;
+    color: #B0BEC5;
+} */
+
+/* PARAGRAPHES */
 p {
-    font-size: 16px;
+    font-size: 18px;
+    color: #dcdcdc;
+    margin-bottom: 1.5em;
 }
 
 /* SLIDER */
 .slider {
-    width: 100%;
+    position: relative;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
 }
 
 /* BOUTONS DE SLIDER */
 button {
-    padding: 10px 15px;
-    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #2F4F4F, #607D8B); /* Vert profond + bleu-gris */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #607D8B, #B0BEC5);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+button.prev {
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+button.next {
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+button.prev:hover, button.next:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
-    width: 90%;
-    max-width: 1200px;
+    background: #2F4F4F; /* Vert profond */
+    color: #ccc;
+    width: 80%;
     margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    body {
-        padding: 60px 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2, h3, h4 {
-        font-size: 20px;
-    }
-
-    .skills-table {
-        width: 100%; /* Définir une largeur pour le tableau */
-        margin: 0 auto; /* Centrer horizontalement */
-        border-collapse: collapse;
-        text-align: left;
-        background-color: #333;
-        border-radius: 10px;
-        overflow: hidden;
-        font-size: 14px;
-    }
-
-    .skills-table th, .skills-table td {
-        padding: 10px;
-        text-align: left;
-    }
-    .skills-table th:nth-child(1), 
-    .skills-table td:nth-child(1) {
-        text-align: center; /* Centrer le texte dans la première colonne */
-        width: 30%; /* Largeur fixe pour la première colonne */
-    }
-    
-    /* Aligner le texte à gauche dans la colonne de droite */
-    .skills-table th:nth-child(2), 
-    .skills-table td:nth-child(2) {
-        text-align: center; /* Aligner le texte à gauche dans la deuxième colonne */
-        width: 70%; /* Largeur fixe pour la deuxième colonne */
-    }
-    
-    /* Optionnel : Ajouter une couleur de fond pour les en-têtes */
-    .skills-table th {
-        background-color: #444;
-        color: #fff;
-        font-weight: bold;
-    }
-    
-    /* Ajouter un effet de survol pour les lignes */
-    .skills-table tr:hover {
-        background-color: #555;
-    }
-    
-    
-    .skills-table td {
-        padding: 12px;
-        border-bottom: 1px solid #444;
-        color: #f5f5f5;
-    }
-    
-    .skills-table td strong {
-        color: #607D8B;
-    }
-    
-    .skills-table tr:last-child td {
-        border-bottom: none;
-    }
+footer p {
+    font-size: 16px;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 14px;
-    }
-    button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
+/* Style des icônes sociales */
+.social-links a {
+    color: #607D8B; /* Bleu-gris */
+    font-size: 2rem; /* Taille des icônes */
+    margin: 0 15px; /* Espacement entre les icônes */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #B0BEC5; /* Gris clair au survol */
+}
+
+/* Pour que les icônes soient centrées horizontalement */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Section "About" */
+#about2 {
+    padding: 40px 15px;
+    /* text-align: center; */
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Centre la section */
+    width: 90%; /* Définit la largeur de la section */
+}
+
+/* Style du tableau */
+.skills-table {
+    width: 95%; /* Définir une largeur pour le tableau */
+    margin: 0 auto; /* Centrer horizontalement */
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Définir des largeurs fixes pour chaque colonne */
+.skills-table th, .skills-table td {
+    padding: 15px;
+    text-align: left;
+    height: 75px;
+}
+
+/* Centrer le texte dans la colonne de gauche */
+.skills-table th:nth-child(1), 
+.skills-table td:nth-child(1) {
+    text-align: center; /* Centrer le texte dans la première colonne */
+    width: 30%; /* Largeur fixe pour la première colonne */
+}
+
+/* Aligner le texte à gauche dans la colonne de droite */
+.skills-table th:nth-child(2), 
+.skills-table td:nth-child(2) {
+    text-align: center; /* Aligner le texte à gauche dans la deuxième colonne */
+    width: 70%; /* Largeur fixe pour la deuxième colonne */
+}
+
+/* Optionnel : Ajouter une couleur de fond pour les en-têtes */
+.skills-table th {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Ajouter un effet de survol pour les lignes */
+.skills-table tr:hover {
+    background-color: #555;
+}
+
+
+.skills-table td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    color: #f5f5f5;
+}
+
+.skills-table td strong {
+    color: #798a93;
+}
+
+.skills-table tr:last-child td {
+    border-bottom: none;
 }
