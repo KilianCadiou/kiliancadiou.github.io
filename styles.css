@@ -342,4 +342,9 @@ footer p {
         object-fit: cover;
         display: block;
     }
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
 }
