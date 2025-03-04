@@ -308,28 +308,6 @@ footer p {
         overflow-x: hidden;
     }
 
-    /* NAVIGATION */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(30, 30, 30, 0.9);
-        text-align: center;
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
     /* TITRES */
     h1 {
         font-size: 20px;
@@ -383,15 +361,59 @@ footer p {
         object-fit: cover;
         display: block;
     }
-    .nav-toggle {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 30, 30, 0.9);
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
         display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;  /* Affiche le bouton hamburger uniquement sur mobile */
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;  /* Centre le bouton hamburger verticalement */
+        left: 50%;  /* Centre horizontalement */
+        transform: translate(-50%, -50%);  /* Ajuste pour centrer parfaitement */
+        z-index: 101;  /* Assurez-vous que le bouton soit toujours au-dessus des autres éléments */
+    }
+
+    /* Ajout de la barre horizontale sous le bouton hamburger */
+    .toggle-bar {
+        width: 60%; /* Largeur de la barre */
+        height: 2px; /* Hauteur de la barre */
+        background-color: #fff; /* Couleur blanche */
+        margin-top: 10px; /* Espacement au-dessus de la barre pour la séparer du bouton */
+        margin-left: auto; /* Centrer horizontalement */
+        margin-right: auto; /* Centrer horizontalement */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Ombre subtile pour un effet moderne */
+        border-radius: 5px; /* Arrondir les coins de la barre */
+        position: absolute;  /* Positionner la barre sous le bouton */
+        top: calc(50% + 20px); /* Positionner la barre 20px sous le centre du bouton hamburger */
+        left: 50%;  /* Centrer horizontalement */
+        transform: translateX(-50%); /* Ajuste pour centrer parfaitement */
     }
 
     nav ul {
         display: none;  /* Masque le menu par défaut */
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px; /* Décalage pour être sous la barre */
         left: 0;
         width: 100%;
         background: rgba(30, 30, 30, 0.9);
@@ -408,6 +430,5 @@ footer p {
         color: #ffffff;
         font-size: 20px;
     }
-
 }
 
