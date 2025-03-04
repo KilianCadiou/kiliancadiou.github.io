@@ -87,6 +87,17 @@ h2, h3, h4 {
     font-weight: 600;
 }
 
+/* h2 {
+    font-size: 32px;
+    color: #607D8B;
+}
+
+h3 {
+    font-size: 24px;
+    font-style: italic;
+    color: #B0BEC5;
+} */
+
 /* PARAGRAPHES */
 p {
     font-size: 18px;
@@ -118,14 +129,6 @@ p {
 
 .slide.active {
     opacity: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 /* BOUTONS DE SLIDER */
@@ -166,8 +169,154 @@ button.prev:hover, button.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2F4F4F; /* Vert profond */
+    color: #ccc;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Style des icônes sociales */
+.social-links a {
+    color: #607D8B; /* Bleu-gris */
+    font-size: 2rem; /* Taille des icônes */
+    margin: 0 15px; /* Espacement entre les icônes */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #B0BEC5; /* Gris clair au survol */
+}
+
+/* Pour que les icônes soient centrées horizontalement */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Section "About" */
+#about2 {
+    padding: 40px 15px;
+    /* text-align: center; */
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Centre la section */
+    width: 90%; /* Définit la largeur de la section */
+}
+
+/* Style du tableau */
+.skills-table {
+    width: 95%; /* Définir une largeur pour le tableau */
+    margin: 0 auto; /* Centrer horizontalement */
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Définir des largeurs fixes pour chaque colonne */
+.skills-table th, .skills-table td {
+    padding: 15px;
+    text-align: left;
+    height: 75px;
+}
+
+/* Centrer le texte dans la colonne de gauche */
+.skills-table th:nth-child(1), 
+.skills-table td:nth-child(1) {
+    text-align: center; /* Centrer le texte dans la première colonne */
+    width: 30%; /* Largeur fixe pour la première colonne */
+}
+
+/* Aligner le texte à gauche dans la colonne de droite */
+.skills-table th:nth-child(2), 
+.skills-table td:nth-child(2) {
+    text-align: center; /* Aligner le texte à gauche dans la deuxième colonne */
+    width: 70%; /* Largeur fixe pour la deuxième colonne */
+}
+
+/* Optionnel : Ajouter une couleur de fond pour les en-têtes */
+.skills-table th {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Ajouter un effet de survol pour les lignes */
+.skills-table tr:hover {
+    background-color: #555;
+}
+
+
+.skills-table td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    color: #f5f5f5;
+}
+
+.skills-table td strong {
+    color: #798a93;
+}
+
+.skills-table tr:last-child td {
+    border-bottom: none;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    body {
+        padding: 60px 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 30, 30, 0.9);
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3, h4 {
+        font-size: 20px;
+    }
+
+    .skills-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .skills-table th, .skills-table td {
+        padding: 10px;
+    }
     .slider {
         width: 100%;
         max-width: 100%;
