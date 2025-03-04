@@ -283,9 +283,7 @@ footer p {
     .nav-toggle {
         display: block;
     }
-    header {
-        padding: 40px 0;
-    }
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -296,7 +294,7 @@ footer p {
         background: rgba(30, 30, 30, 0.9);
         text-align: center;
         gap: 10px;
-        padding: 10px 0;
+        padding: 40px 0;
     }
 
     nav ul.show {
