@@ -342,7 +342,7 @@ footer p {
         object-fit: cover;
         display: block;
     }
-    body {
+    section {
         width: 100vw;
         overflow-x: hidden;
     }
