@@ -72,7 +72,7 @@ h1 {
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #607D8B, #B0BEC5); /* Dégradé bleu-gris */
+    background: linear-gradient(135deg, #2F4F4F, #6cb8b8); /* Dégradé bleu-gris */
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 1px 40px;
@@ -293,8 +293,8 @@ footer p {
         width: 100%;
         background: rgba(30, 30, 30, 0.9);
         text-align: center;
-        gap: 40px;
-        padding: 40px 0;
+        gap: 10px;
+        padding: 10px 0;
     }
 
     nav ul.show {
