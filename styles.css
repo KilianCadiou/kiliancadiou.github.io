@@ -307,8 +307,17 @@ footer p {
     border-bottom: none;
 }
 
-.bar {
-    width: 60%; /* Largeur des barres */
+.bar1 {
+    width: 75%; /* Largeur des barres */
+    height: 2px; /* Hauteur des barres */
+    background-color: #fff; /* Couleur des barres */
+    margin: 20px auto; /* Centrage et espacement vertical */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Ombre subtile pour un effet moderne */
+    border-radius: 5px; /* Arrondir les bords des barres */
+}
+
+.bar2 {
+    width: 58%; /* Largeur des barres */
     height: 2px; /* Hauteur des barres */
     background-color: #fff; /* Couleur des barres */
     margin: 20px auto; /* Centrage et espacement vertical */
